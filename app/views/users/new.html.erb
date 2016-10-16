@@ -13,13 +13,13 @@
       <%= f.text_field :lastName, class: 'form_control' %>
 
       <%= f.label :email %>
-      <%= f.text_field :email, class: 'form_control' %>
+      <%= f.email_field :email, class: 'form_control' %>
 
       <%= f.label :password %>
-      <%= f.text_field :password, class: 'form_control' %>
+      <%= f.password_field :password, class: 'form_control' %>
 
       <%= f.label :password_confirmation, "Confirm your password" %>
-      <%= f.text_field :password_confirmation, class: 'form_control' %>
+      <%= f.password_field :password_confirmation, class: 'form_control' %>
 
       <%= f.submit "Create account", class: "btn btn-primary" %>
     <% end %>

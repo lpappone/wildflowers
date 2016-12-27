@@ -1,27 +1,9 @@
 <% provide(:title, 'Sign up') %>
+<% provide(:button_text, 'Create my account') %>
 <h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: signup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-
-      <%= f.label :firstName, "First Name" %>
-      <%= f.text_field :firstName, class: 'form_control' %>
-
-      <%= f.label :lastName, "Last Name" %>
-      <%= f.text_field :lastName, class: 'form_control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form_control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form_control' %>
-
-      <%= f.label :password_confirmation, "Confirm your password" %>
-      <%= f.password_field :password_confirmation, class: 'form_control' %>
-
-      <%= f.submit "Create account", class: "btn btn-primary" %>
-    <% end %>
+    <%= render 'form', url: signup_path %>
   </div>
 </div>
